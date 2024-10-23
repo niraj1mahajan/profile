@@ -1,1 +1,1 @@
-alert(1337)
+<script>alert(1337)</script>
